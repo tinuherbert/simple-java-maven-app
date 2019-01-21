@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        build 'Build 1'
+        build 'simple-java-maven-app'
       }
     }
     stage('Test') {
