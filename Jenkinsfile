@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        bat(script: 'mvn package', returnStatus: true)
+        bat 'mvn package'
       }
     }
     stage('Test') {
