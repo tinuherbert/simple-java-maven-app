@@ -4,17 +4,18 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        build 'simple-java-maven-app'
+        bat(script: 'mvn package', returnStatus: true)
       }
     }
     stage('Test') {
       steps {
+        bat(script: 'mvn test', returnStatus: true)
         echo 'Tested'
       }
     }
     stage('Deploy') {
       steps {
-        mail(subject: 'Deploy', body: 'Deploy', to: 'tinuh@nousinfo.com')
+        bat(script: 'mvn deploy', returnStatus: true)
       }
     }
   }
