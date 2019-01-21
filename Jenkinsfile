@@ -4,18 +4,18 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        bat(script: 'mvn package', returnStatus: true)
+        bat 'mvn package'
       }
     }
     stage('Test') {
       steps {
-        bat(script: 'mvn test', returnStatus: true)
+        bat 'mvn test'
         echo 'Tested'
       }
     }
     stage('Deploy') {
       steps {
-        bat(script: 'mvn deploy', returnStatus: true)
+        bat 'mvn deploy'
       }
     }
   }
