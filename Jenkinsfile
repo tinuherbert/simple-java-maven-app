@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        bat 'sh mvn -B -DskipTests clean package'
+        sh 'sh mvn -B -DskipTests clean package'
       }
     }
     stage('Test') {
