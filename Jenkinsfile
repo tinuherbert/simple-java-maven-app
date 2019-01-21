@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        bat 'mvn deploy'
+        bat './jenkins/scripts/deliver.sh'
       }
     }
   }
