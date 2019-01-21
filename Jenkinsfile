@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       agent any
       steps {
-        build 'Build'
+        build 'Build 1'
       }
     }
     stage('Test') {
