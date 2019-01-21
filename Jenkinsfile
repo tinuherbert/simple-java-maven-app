@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        bat 'mvn deploy:deploy-file -DrepositoryId=organisation-internal -Durl=http://localhost:8081/artifactory/NousDevops -DgroupId=test -DartifactId=test -Dversion=1.1 -Dpackaging=jar -Dfile=target/test-1.1.jar'
+        bat 'mvn deploy:deploy-file -DrepositoryId=organisation-internal -Durl=http://localhost:8081/artifactory/NousDevops -DgroupId=test -DartifactId=test -Dversion=1.1 -Dpackaging=jar'
       }
     }
   }
