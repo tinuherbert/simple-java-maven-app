@@ -8,18 +8,9 @@ pipeline {
       }
     }
     stage('Test') {
-      parallel {
-        stage('Test') {
-          steps {
-            bat 'mvn test'
-            echo 'Tested'
-          }
-        }
-        stage('Verify') {
-          steps {
-            bat 'mvn verify'
-          }
-        }
+      steps {
+        bat 'mvn test'
+        echo 'Tested'
       }
     }
     stage('Deploy') {
