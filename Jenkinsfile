@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        bat 'mvn deploy -DaltDeploymentRepository=NousDevops::default::http://localhost:8081/artifactory/NousVirtualRelease'
+        bat 'mvn deploy -DaltDeploymentRepository=central::default::http://localhost:8081/artifactory/NousVirtualRelease'
       }
     }
   }
